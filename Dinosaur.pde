@@ -18,7 +18,6 @@ class Dinosaur {
     fill(255, 30, 30);
     ellipse(50, dy, 60, 60);
 
-
     //move dino
     da = da + g;   //change acceleration based on gravity
     ds = ds + da;  //change speed based on speed
@@ -30,5 +29,14 @@ class Dinosaur {
       ds = 0;
       da = 0;
     }
+    
+    // status updates for dinosaur position
+    textSize(12);
+    fill(0);
+    text("dinoY is " + dy, 150, 25);
+    text("dinoS is " + ds, 150, 50);
+    text("dinoA is " + da, 150, 75);
+    // text("distance is " + distance, 150, 100); // will make this work later
+    
   }
 }

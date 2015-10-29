@@ -26,14 +26,6 @@ void draw() {
   c1.update(gravity); // re-draw cactus in new position
   d1.update(gravity); // re-draw dino in new position
   
-  //// status updates
-  //textSize(12);
-  //fill(0);
-  //text("dinoY is " + dinoY, 150, 25);
-  //text("dinoS is " + dinoS, 150, 50);
-  //text("dinoA is " + dinoA, 150, 75);
-  //text("distance is " + distance, 150, 100);
-
   //// determine distance between the objects
   ////        dino - cactus
   //float a = dinoY - 175;
