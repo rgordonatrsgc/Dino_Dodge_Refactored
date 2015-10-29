@@ -20,8 +20,8 @@ class Dinosaur {
 
     //move dino
     da = da + g;   //change acceleration based on gravity
-    ds = ds + da;  //change speed based on speed
-    dy = dy + ds;  //change speed based on acceleration
+    ds = ds + da;  //change speed based on acceleration
+    dy = dy + ds;  //change location based on speed
 
     //stop the dino if it hits the ground
     if (dy > 170) { // bottom of the screen (200) minus the radius of (30)
@@ -38,5 +38,20 @@ class Dinosaur {
     text("dinoA is " + da, 150, 75);
     // text("distance is " + distance, 150, 100); // will make this work later
     
+  }
+  
+  // getY
+  //
+  // Purpose: an accessor method; lets us find out where the dino is (vertically)
+  float getY() {
+    return dy;
+  }
+  
+  // setA
+  //
+  // Purpose: a mutator method; lets the acceleration for the dinosaur be set
+  //          from outside the class
+  void setA(float newA_) {
+    da = newA_;
   }
 }
