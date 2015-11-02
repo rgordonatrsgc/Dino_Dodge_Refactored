@@ -24,7 +24,7 @@ void draw() {
   background(255);
 
   d1.update(gravity); // re-draw dino in new position
-  c1.update(gravity, d1); // re-draw cactus in new position    
+  c1.update(d1); // re-draw cactus in new position    
 
 
 }

@@ -16,7 +16,7 @@ class Cactus {
   }
 
   //update: draws things related to cactus
-  void update(float g, Dinosaur d) {
+  void update(Dinosaur d) {
 
     //change the horizontal speed (speed is changed by acceleration)
     s1 = s1 + a1;
