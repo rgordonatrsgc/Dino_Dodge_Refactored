@@ -23,16 +23,16 @@ void draw() {
   // background clears each time draw() function loops
   background(255);
   
-  c1.update(gravity); // re-draw cactus in new position
-  d1.update(gravity); // re-draw dino in new position
-  
   // check whether the cactus is touching the dino
   if (d1.isTouching(c1)) {
     textSize(80);
     text("HIT", 400, 100);
     noLoop();  // stop the game
   }
-  
+
+  c1.update(gravity); // re-draw cactus in new position
+  d1.update(gravity); // re-draw dino in new position
+    
 }
 
 // respond to keypress 
