@@ -23,9 +23,9 @@ void draw() {
   // background clears each time draw() function loops
   background(255);
 
-  d1.update(gravity); // re-draw dino in new position
-  c1.update(d1); // re-draw cactus in new position    
-
+  // Re-draw sprites
+  d1.update(gravity);
+  c1.update(d1);    
 
 }
 
