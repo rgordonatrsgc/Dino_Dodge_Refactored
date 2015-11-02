@@ -6,13 +6,13 @@ float distance; // track distance between dino and a cactus
 
 // this function runs once only
 void setup() {
-  
+
   // draw the canvas
   size(800, 200);
-  
+
   c1 = new Cactus (900, -0.1, -1);  // create cactus object
   d1 = new Dinosaur (0, 170, 0);    // craete dino object
-  
+
   // set gravity
   gravity = 0.075;
 }
@@ -22,17 +22,11 @@ void draw() {
 
   // background clears each time draw() function loops
   background(255);
-  
-  // check whether the cactus is touching the dino
-  if (d1.isTouching(c1)) {
-    textSize(80);
-    text("HIT", 400, 100);
-    noLoop();  // stop the game
-  }
 
-  c1.update(gravity); // re-draw cactus in new position
   d1.update(gravity); // re-draw dino in new position
-    
+  c1.update(gravity, d1); // re-draw cactus in new position    
+
+
 }
 
 // respond to keypress 

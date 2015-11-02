@@ -21,12 +21,12 @@ class Dinosaur {
     //draw dino
     fill(255, 30, 30);
     ellipse(dx, dy, dr*2, dr*2);
-
+    
     //move dino
     da = da + g;   //change acceleration based on gravity
     ds = ds + da;  //change speed based on acceleration
     dy = dy + ds;  //change location based on speed
-
+    
     //stop the dino if it hits the ground
     if (dy > 170) { // bottom of the screen (200) minus the radius of (30)
       dy = 170;

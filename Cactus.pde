@@ -16,11 +16,7 @@ class Cactus {
   }
 
   //update: draws things related to cactus
-  void update(float g) {
-
-    //draw a cactus at the bottom right corner of the screen
-    fill(0, 0, 255);
-    ellipse(x1, y1, r1*2, r1*2);
+  void update(float g, Dinosaur d) {
 
     //change the horizontal speed (speed is changed by acceleration)
     s1 = s1 + a1;
@@ -28,20 +24,31 @@ class Cactus {
     //create the appearance of moving by changing the x position
     x1 = x1 + s1;
 
+    //draw a cactus at the bottom right corner of the screen
+    fill(0, 0, 255);
+    ellipse(x1, y1, r1*2, r1*2);
+    
+    // check whether I am colliding with the dino
+    if (d.isTouching(this)) {
+      textSize(80);
+      text("HIT", 400, 100);
+      noLoop();  // stop the game
+    }
+
     // reset the position
     if (x1 < -50) {
       x1 = 900; //place off screen on right 
       s1 = -10; //reset the speed
     }
   }
-  
+
   // getX
   //
   // Purpose: an accessor method; lets us find out where the cactus is (horizontally)
   float getX() {
     return x1;
   }
-  
+
   // getY
   //
   // Purpose: an accessor method; lets us find out where the cactus is (vertically)
@@ -55,5 +62,4 @@ class Cactus {
   float getR() {
     return r1;
   }
-  
 }
